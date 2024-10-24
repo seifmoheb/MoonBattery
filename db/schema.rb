@@ -15,7 +15,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_23_184908) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "configurations", force: :cascade do |t|
-    t.string "macAddress"
+    t.string "macaddress"
     t.string "configuration"
     t.string "value"
     t.datetime "created_at", null: false
@@ -23,9 +23,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_23_184908) do
   end
 
   create_table "storages", force: :cascade do |t|
-    t.string "macAddress"
-    t.integer "serialNumber"
-    t.string "lastContact"
+    t.string "macaddress"
+    t.integer "serialnumber"
+    t.string "lastcontact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

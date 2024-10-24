@@ -1,11 +1,11 @@
 class CreateStorages < ActiveRecord::Migration[8.0]
   def change
     create_table :storages do |t|
-      t.string :macAddress
-      t.integer :serialNumber
-      t.string :lastContact
+      t.string :macaddress
+      t.integer :serialnumber
+      t.string :lastcontact
 
-      t.timestamps
+      #t.timestamps
     end
   end
 end

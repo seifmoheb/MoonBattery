@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'storage/new' => 'storage#new'
+  post 'storage/create' => 'storage#create', as: :create_path
   root "home#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
