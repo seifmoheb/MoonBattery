@@ -1,20 +1,24 @@
 <%= form_with model: @storage, url: 'create', method: :post, class: "container", local: true do |f| %>
   <div class="field">
-    <%= f.label :macaddress %> <!-- This should match the database column -->
+    <%= f.label :macaddress %> 
     <%= f.text_field :macaddress %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :serialnumber %> <!-- Lowercase and matching the database -->
-    <%= f.number_field :serialnumber %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :lastcontact %> <!-- This too -->
-    <%= f.text_field :lastcontact %>
   </div>
   
   <div class="actions">
     <%= f.submit 'Add' %>
   </div>
+<% end %>
+</br>
+<% if @previousValue %>
+<p>
+  <%= @previousValue.serialnumber %>
+</p>
+<% else %>
+<p></p>
+<% end %>
+
+</br>
+<% Storage.all.each do |item| %>
+  <%= item.macaddress %>
+
 <% end %>
