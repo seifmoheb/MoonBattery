@@ -12,12 +12,18 @@ class StorageController < ApplicationController
             previousValue = Storage.last.serialnumber 
         end
         @previousValue = previousValue + 1
+        @Time = Time.now
         
-        @storage = Storage.new(info_params.merge(serialnumber: @previousValue))
+        @storage = Storage.new(info_params.merge(serialnumber: @previousValue, lastcontact: @Time))
         if @storage.save
             redirect_to '/storage/new', notice: 'Storage added successfully'
         else
             render :new
+        end
+    end
+    def ping 
+        Storage.all.each do |item|
+             item.update_attributes(lastcontact: Time.now)    
         end
     end
 
