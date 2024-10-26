@@ -1,24 +1,6 @@
-<%= form_with model: @storage, url: 'create', method: :post, class: "container", local: true do |f| %>
-  <div class="field">
-    <%= f.label :macaddress %> 
-    <%= f.text_field :macaddress %>
-  </div>
-  
-  <div class="actions">
-    <%= f.submit 'Add' %>
-  </div>
-<% end %>
-</br>
-<% if @previousValue %>
-<p>
-  <%= @previousValue.serialnumber %>
-</p>
-<% else %>
-<p></p>
-<% end %>
-
-</br>
 <% Storage.all.each do |item| %>
   <%= item.macaddress %>
+  <%= item.serialnumber %>
+  <%= item.lastcontact %>
 
 <% end %>
