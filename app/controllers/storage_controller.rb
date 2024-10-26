@@ -24,8 +24,8 @@ class StorageController < ApplicationController
         end
     end
     def ping 
-
-        data = Storage.find_by(macaddress: 'abcde123456')
+        macaddress_received = params[:macaddress]
+        data = Storage.find_by(macaddress: macaddress_received)
         data.update(lastcontact:Time.current) if data
     end
 
