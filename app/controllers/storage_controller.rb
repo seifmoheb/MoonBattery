@@ -11,24 +11,25 @@ class StorageController < ApplicationController
         else
             previousValue = Storage.last.serialnumber 
         end
-        @previousValue = previousValue + 1
+        @serialnumber = previousValue + 1
         @Time = Time.now
         
-        @storage = Storage.new(info_params.merge(serialnumber: @previousValue, lastcontact: @Time))
+        @storage = Storage.new(info_params.merge(serialnumber: @serialnumber, lastcontact: @Time))
         if @storage.save
-            redirect_to '/storage/new', notice: 'Storage added successfully'
+            redirect_to '/storage/new'
         else
             render :new
         end
     end
     def ping 
-        Storage.all.each do |item|
-             item.update_attributes(lastcontact: Time.now)    
-        end
+        
+        data = Storage.find_by(macaddress: 'abcde123456')
+        data.update(lastcontact:Time.current) if data
+       
     end
 
     private
     def info_params
-        params.require(:storage).permit(:macaddress, :lastcontact)
+        params.require(:storage).permit(:macaddress)
     end
 end
