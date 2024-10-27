@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   post 'storage/create' => 'storage#create'
   root "home#index"
   get '/ping', to: 'storage#ping'
+  post 'configuration/add', to:'configuration#add'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
