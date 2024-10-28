@@ -18,15 +18,17 @@ class StorageController < ApplicationController
         
         @storage = Storage.new(serialnumber: @serialnumber, lastcontact: @Time,macaddress: macaddress_received)
         if @storage.save
-            redirect_to '/storage/new'
-        else
-            render :new
+            redirect_to '/storage/new', status: :ok
         end
     end
     def ping 
         macaddress_received = params[:macaddress]
         data = Storage.find_by(macaddress: macaddress_received)
-        data.update(lastcontact:Time.current) if data
+        if data
+            if data.update(lastcontact:Time.now)
+                redirect_to '/home/index', status: :ok
+            end
+        end
     end
 
     private

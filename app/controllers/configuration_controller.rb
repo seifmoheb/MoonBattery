@@ -20,4 +20,9 @@ class ConfigurationController < ApplicationController
             end
         end
     end
+
+    def show
+        @passed_item_macaddress = params[:macaddress]
+        @configurations = ::Configuration.where(macaddress: @passed_item_macaddress) 
+    end
 end
