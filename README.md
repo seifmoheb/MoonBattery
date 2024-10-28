@@ -11,8 +11,8 @@ These instructions will help you set up the MoonBattery project on your local ma
 - Ruby
 - PostgreSQL
 - MySQL (for Zabbix setup)
-- Zabbix (optional monitoring tool)
-- Apache or Nginx (if required for Zabbix frontend)
+- Zabbix
+- Apache
 
 ### Installation
 
