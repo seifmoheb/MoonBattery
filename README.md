@@ -2,6 +2,10 @@
 
 This repository is for the MoonBattery project, a Ruby on Rails application with PostgreSQL as its database. The project includes a monitoring setup using Zabbix to ensure uptime and performance monitoring.
 
+![Screenshot 2024-10-29 202038](https://github.com/user-attachments/assets/26e27f05-9514-402c-a9f5-47949062ecec)
+
+
+
 ## Getting Started
 
 These instructions will help you set up the MoonBattery project on your local machine for development and testing.
