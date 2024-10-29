@@ -140,7 +140,8 @@ Configuration endpoint needs the macaddress and 1 or more configuration of type 
 #http://127.0.0.1:3000/configuration/add?macaddress=abcdefg098&configurations=Brightness:50;Color:Green;Timer:Off;Sound:Off
 
 
-####################
+############################################################################
+
 How can you authenticate the communication between the API and Moonbattery?
 
 
