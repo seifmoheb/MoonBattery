@@ -4,6 +4,7 @@ This repository is for the MoonBattery project, a Ruby on Rails application with
 
 ![Screenshot 2024-10-29 202038](https://github.com/user-attachments/assets/26e27f05-9514-402c-a9f5-47949062ecec)
 
+![Screenshot 2024-10-29 202112](https://github.com/user-attachments/assets/d6050e23-d969-49c7-8cd6-8fcc243d6864)
 
 
 ## Getting Started
