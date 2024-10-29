@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "home#index"
   post 'storage/new' => 'storage#new'
-  post 'storage/create' => 'storage#create'
+  post 'storage/register' => 'storage#register'
   put '/ping/:macaddress', to: 'storage#ping'
   post 'configuration/add', to:'configuration#add'
   get 'configuration/config_item', to: 'configuration#show', as: :config_item

@@ -1,3 +1,5 @@
 class Storage < ApplicationRecord
-    validates :macaddress, uniqueness: true
+    self.primary_key = 'macaddress'
+    validates :macaddress, uniqueness: true,presence: true
+    has_many :configurations, foreign_key: 'macaddress'
 end

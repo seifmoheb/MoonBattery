@@ -6,7 +6,7 @@ class StorageController < ApplicationController
 
     end
     
-    def create
+    def register
         macaddress_received = params[:macaddress]
         if Storage.last.nil?
             previousValue = 1111101000

@@ -13,7 +13,8 @@ class ConfigurationController < ApplicationController
             if existingConfig.nil?
                 # no configuration of this type for this macaddress
                 @newConfigRecord = ::Configuration.new(macaddress:macaddress_received,configuration:key_received,value:value_received)
-                @newConfigRecord.save!
+                @newConfigRecord.save
+                    
             else
                 existingConfig.update(value:value_received)
                 #An exisiting record for this configuration
@@ -23,6 +24,6 @@ class ConfigurationController < ApplicationController
 
     def show
         @passed_item_macaddress = params[:macaddress]
-        @configurations = ::Configuration.where(macaddress: @passed_item_macaddress) 
+        @record = Storage.find(@passed_item_macaddress)
     end
 end

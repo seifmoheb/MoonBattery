@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_10_26_193039) do
+ActiveRecord::Schema[8.0].define(version: 2024_10_29_194848) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -18,16 +18,10 @@ ActiveRecord::Schema[8.0].define(version: 2024_10_26_193039) do
     t.string "macaddress"
     t.string "configuration"
     t.string "value"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
-  create_table "storages", force: :cascade do |t|
-    t.string "macaddress"
+  create_table "storages", primary_key: "macaddress", id: :string, force: :cascade do |t|
     t.integer "serialnumber"
     t.string "lastcontact"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["macaddress"], name: "index_storages_on_macaddress", unique: true
   end
 end
