@@ -126,18 +126,25 @@ Testing the API using POSTMAN
 
 
 Register endpoint needs macaddress passed as a parameter as follows:
+
 #http://127.0.0.1:3000/storage/new?macaddress=abcdefg098
 
 Ping endpoint needs also the macaddress as a parameter as follows:
+
 #http://127.0.0.1:3000/ping/macaddress=abcdefg098
+
 I used Zabbix to trigger a periodic ping to the backend every 1m
 
 Configuration endpoint needs the macaddress and 1 or more configuration of type key-value pair separated with ';' and defined in this format "Key:Value" as follows:
+
 #http://127.0.0.1:3000/configuration/add?macaddress=abcdefg098&configurations=Brightness:50;Color:Green;Timer:Off;Sound:Off
 
 
 ####################
 How can you authenticate the communication between the API and Moonbattery?
+
+
 The proper authentication can be handled through generated secure token that expires in a period of time embedded within the URL and once it expires, the url itself won't be reaching the endpoint.
+
 Also, we can use another type of security which is using IP Address to limit the usage of the API to a certain API range.
 
