@@ -65,6 +65,10 @@ sudo -u postgres psql
 
 ```
 Zabbix Monitoring Setup
+
+![Screenshot 2024-10-29 202220](https://github.com/user-attachments/assets/39bcbe73-debc-44c4-abfa-9768bd5c073c)
+
+
 Follow these steps to install and configure Zabbix for monitoring your Rails backend.
 
 Install Zabbix
@@ -112,6 +116,13 @@ sudo systemctl restart apache2
 ```
 
 Now the setup is ready.
+
+Testing the API using POSTMAN
+
+![Screenshot 2024-10-29 202536](https://github.com/user-attachments/assets/c402c819-e560-435a-91e2-3f814fb83fd9)
+
+![Screenshot 2024-10-29 202442](https://github.com/user-attachments/assets/5a770c0d-c296-4143-b608-8554de1c8ede)
+
 
 Register endpoint needs macaddress passed as a parameter as follows:
 #http://127.0.0.1:3000/storage/new?macaddress=abcdefg098
