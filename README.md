@@ -127,7 +127,7 @@ Testing the API using POSTMAN
 
 Register endpoint needs macaddress passed as a parameter as follows:
 
-#http://127.0.0.1:3000/storage/new?macaddress=abcdefg098
+#http://127.0.0.1:3000/storage/register?macaddress=abcdefg098
 
 Ping endpoint needs also the macaddress as a parameter as follows:
 
