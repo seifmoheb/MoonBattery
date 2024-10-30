@@ -65,6 +65,10 @@ sudo -u postgres psql
 #this is the default database I am using based on the database.yml
 
 ```
+
+![Screenshot 2024-10-29 235116](https://github.com/user-attachments/assets/84abbe0f-6032-49df-b4a4-2181b986a0fb)
+
+
 Zabbix Monitoring Setup
 
 ![Screenshot 2024-10-29 202220](https://github.com/user-attachments/assets/39bcbe73-debc-44c4-abfa-9768bd5c073c)
