@@ -32,6 +32,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Make importmap executable
+        run: chmod +x bin/importmap
+      
+      
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -47,7 +51,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
+      - name: Make rubocop executable
+        run: chmod +x bin/rubocop
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -79,7 +84,8 @@ jobs:
     steps:
       - name: Install packages
         run: sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libjemalloc2 libvips postgresql-client
-
+      - name: Make rails executable
+        run: chmod +x bin/rails
       - name: Checkout code
         uses: actions/checkout@v4
 
