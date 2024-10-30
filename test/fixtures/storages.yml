@@ -3,9 +3,9 @@
 one:
   macaddress: MyString
   serialnumber: 1
-  lastContact: MyString
+  lastcontact: MyString
 
 two:
   macaddress: MyString
   serialnumber: 1
-  lastContact: MyString
+  lastcontact: MyString
