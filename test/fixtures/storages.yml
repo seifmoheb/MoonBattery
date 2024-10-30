@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  macAddress: MyString
+  macaddress: MyString
   serialNumber: 1
   lastContact: MyString
 
 two:
-  macAddress: MyString
+  macaddress: MyString
   serialNumber: 1
   lastContact: MyString
