@@ -4,8 +4,7 @@ class CreateStorages < ActiveRecord::Migration[8.0]
       t.string :macaddress
       t.integer :serialnumber
       t.string :lastcontact
-
-      #t.timestamps
+      # t.timestamps
     end
   end
 end

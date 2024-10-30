@@ -4,8 +4,7 @@ class CreateConfigurations < ActiveRecord::Migration[8.0]
       t.string :macAddress
       t.string :configuration
       t.string :value
-
-      #t.timestamps
+      # t.timestamps
     end
   end
 end
