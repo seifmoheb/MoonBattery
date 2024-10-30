@@ -2,10 +2,10 @@
 
 one:
   macaddress: MyString
-  serialNumber: 1
+  serialnumber: 1
   lastContact: MyString
 
 two:
   macaddress: MyString
-  serialNumber: 1
+  serialnumber: 1
   lastContact: MyString
