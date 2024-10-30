@@ -66,7 +66,7 @@ sudo -u postgres psql
 
 ```
 
-![Screenshot 2024-10-29 235116](https://github.com/user-attachments/assets/84abbe0f-6032-49df-b4a4-2181b986a0fb)
+![Screenshot 2024-10-30 164256](https://github.com/user-attachments/assets/7b3d6f88-f0ad-433d-98cc-7816cd05625e)
 
 
 Zabbix Monitoring Setup
